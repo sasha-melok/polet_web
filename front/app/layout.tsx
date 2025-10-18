@@ -3,6 +3,7 @@ import { Train_One, Tektur } from "next/font/google";
 import "./globals.css";
 import Navigation from "./Components/Navigation";
 import Footer from "./Components/Footer";
+import PageTransition from "./Components/PageTransition";
 
 const trainOne = Train_One({
   weight: '400',
@@ -20,17 +21,14 @@ export const metadata: Metadata = {
   description: "Производственное объединение «Полёт» — одно из крупнейших машиностроительных предприятий России, специализирующееся на выпуске ракетно-космической и авиационной техники.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ru">
       <body className={`${tektur.variable} ${trainOne.variable}`}>
+        <div className="bg_opt"></div>
         <Navigation />
         <div className="content">
-          {children}
+          <PageTransition>{children}</PageTransition>
         </div>
         <Footer />
       </body>

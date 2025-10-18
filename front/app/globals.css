@@ -1,16 +1,18 @@
 :root{
     --color-bg-black: #000000;
-    --color-bg-gray: #38383a;
+    --color-bg-gray: #232325;
     --color-text-sub: #939498;
     --color-text-main: #f8f8f8;
-
+    --color-blue: #004DA2;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
     font-size: 16px;
     
     *{
         margin: 0;
         padding: 0;
         font-weight: normal;
-        
+        /* letter-spacing: 1px; */
         box-sizing: border-box;
         text-decoration: none;
         list-style: none;
@@ -23,7 +25,7 @@
         outline: 1px solid transparent;
     }
 
-    h1,h2{
+    h1{
         font-weight: normal;
         font-family: var(--font-train-one), 'Arial Black', sans-serif;
     }
@@ -35,6 +37,7 @@ body{
     flex-direction: column;
     min-height: 100vh;
     background: linear-gradient(var(--color-bg-black), var(--color-bg-gray));
+    overflow-x: clip;
     
     &::after{  
         content: "";
@@ -49,7 +52,26 @@ body{
     }
 
     .content{
+        position: relative;
         flex: 1;
-        margin: 1.5rem 1rem;
+        margin: 1.5rem 7rem 5rem;
     }
+    
+}
+
+.bg_opt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    z-index: -1;
+    opacity: 0.15;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+html {
+    overflow-x: clip;
 }

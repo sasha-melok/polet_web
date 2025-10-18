@@ -1,7 +1,7 @@
 
 footer{
-    margin: 0 6rem .5rem !important;
-    
+    margin: 0 7rem .5rem !important;
+    font-size: 1.05rem;
 
     .info{
         position: relative;
@@ -9,24 +9,27 @@ footer{
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
         align-items: center;
+        align-content: center;
         &::after{
             content: '';
+            will-change: transform;
             position: absolute;
             bottom: 0;
             left: 50%;
-            transform: translateY(20px) translateX(-50%);
-            width: 100%;
+            transform: translateY(2.35rem) translateX(-50%);
+            width: 110%;
             height: 1px;
             background: currentColor;
             clip-path: polygon(0% 50%, 20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%);
         }
         &::before{
             content: '';
+            will-change: transform;
             position: absolute;
             top: 0;
             left: 50%;
-            transform: translateY(-20px) translateX(-50%);
-            width: 100%;
+            transform: translateY(-2.35rem) translateX(-50%);
+            width: 110%;
             height: 1px;
             background: currentColor;
             clip-path: polygon(0% 50%, 20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%);
@@ -44,7 +47,7 @@ footer{
             }
             
             .links{
-                margin-top: 1.7rem;
+                margin-top: 1rem;
 
                 a{
                     margin-right: 1rem;
@@ -64,7 +67,7 @@ footer{
         }
         .nav{
             text-align: center;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             li{
                 margin-bottom: 1.3rem;
 
@@ -99,7 +102,7 @@ footer{
         }
 
         .form{
-            width: 80%;
+            width: 75%;
             justify-self: end;
             h3{
                 color: transparent;
@@ -193,6 +196,7 @@ footer{
                     padding: .5rem 1.5rem;
                     border-radius: var(--radius);
                     border: none;
+                    font-size: 1.005rem;
                     background: linear-gradient(to right, var(--color-text-main), var(--color-text-sub), transparent, transparent, var(--color-text-sub),var(--color-text-main));
                     background-size: 350% 350%;
                     background-position: 0 0;
@@ -214,7 +218,7 @@ footer{
 
     .credits{
         text-align: center;
-        margin-top: 30px;
+        margin-top: 3.3rem;
         .subtext{
             margin-top: 2px;
             font-size: .8rem;
@@ -224,9 +228,4 @@ footer{
     .subtext{
         color: var(--color-text-sub);
     }
-}
-
-@keyframes button{
-    from{}
-    to{}
 }

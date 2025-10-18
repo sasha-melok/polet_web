@@ -1,10 +1,10 @@
 
 nav{
     width: 100%;
-    padding: .6rem 7rem !important;
+    padding: .9rem 7rem !important;
 
     display: grid;
-    grid-template-columns: 40% auto;
+    grid-template-columns: 35% auto;
     align-items: center;
 
     a{outline: 1px solid transparent;}
@@ -50,9 +50,10 @@ nav{
                 transition: transform .3s ease;
             }
 
-            &:hover::after, &:focus::after {
+            &:hover::after, &:focus::after, &.active::after {
                 transform: translateY(5px) translateX(-50%) scaleX(1);
             }
         }
     }
 }
+
