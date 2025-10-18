@@ -18,6 +18,7 @@ nav{
             width: auto;
         
             &:hover img, &:focus img{
+                will-change: transform;
                 transform: scale(1.05);
             }
         }
@@ -36,6 +37,7 @@ nav{
             display: inline-block;
 
             &::after {
+                will-change: transform;
                 content: '';
                 position: absolute;
                 bottom: 0;

@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import './Footer.css'
 
 export default function Footer(){
     const handleSubmit = async (e: React.FormEvent) => {
@@ -21,7 +22,7 @@ export default function Footer(){
         if (res.ok) {
             alert('Сообщение отправлено!');
         } else {
-            alert('Ошибка отправки');
+            res.status == 400 ? alert('Пожалуйста, заполните все поля') : alert('Ошибка отправки, попробуйте позже');
         }
     }
 
@@ -35,10 +36,10 @@ export default function Footer(){
                     <p className="subtext">Справочная АТС: (3812) 39-72-01</p>
                     <p className="subtext">Абонентский отдел: (3812) 39-71-44</p>
                     <div className="links">
-                        <Link href="/">
+                        <Link href="https://t.me/ms_polet">
                             <Image src={'/tg.png'} alt="Ссылка на телеграмм канал" width={40} height={40} />
                         </Link>
-                        <Link href="/">
+                        <Link href="https://m.vk.com/club8788339">
                             <Image src={'/vk.png'} alt="Ссылка на телеграмм канал" width={40} height={40} />
                         </Link>
                         <Link href="/">
@@ -67,11 +68,16 @@ export default function Footer(){
                     </li>
                 </ul>
                 <div className="form">
-                    <h3>Есть вопросы <br /> Напишите нам</h3>
+                    <h3>ЕСТЬ ВОПРОСЫ <br /> НАПИШИТЕ НАМ</h3>
                     <form onSubmit={handleSubmit}>
-                        <input type="email" name="email" id="email" placeholder="Email" />
-                        <textarea name="message" id="message" placeholder="Вопрос"></textarea>
-                        <button type="submit">Отправить</button>
+                        <div className="wrapper">
+                            <input type="email" name="email" id="email" placeholder="Email" />
+                        </div>
+                        <div className="wrapper">
+                            <textarea name="message" id="message" placeholder="Вопрос"></textarea>
+                        </div>
+                        <div className="wrapper_b"><button type="submit">Отправить</button></div>
+                        
                     </form>
                 </div>
             </div>
