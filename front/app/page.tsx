@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default function Home(){
 
   return (
-    <>
+    <div className='p_main'>
     <div className="txt_block">
       <h1>ПО “ПОЛЕТ”</h1>
       <p>Филиал Государственного Космического <br /> Научно-Произвоственного Центра имени М.В.Хруничева</p>
@@ -30,6 +30,6 @@ export default function Home(){
     <div className="img_block">
       <Image src={'/planet.png'} alt='Изображение планеты' fill />
     </div>
-    </>
+    </div>
   )
 }
