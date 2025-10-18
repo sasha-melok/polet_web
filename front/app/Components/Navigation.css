@@ -1,0 +1,27 @@
+
+nav{
+    width: 100%;
+    padding: .6rem 5rem !important;
+
+    display: grid;
+    grid-template-columns: 40% auto;
+    align-items: center;
+
+    .logo{
+        padding-top: 5px;
+        a{
+            height: auto;
+            width: auto;
+        }
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        li{
+            
+        }
+    }
+}

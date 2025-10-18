@@ -1,0 +1,42 @@
+:root{
+    --color-bg-black: #000000;
+    --color-bg-gray: #38383a;
+    --color-text-sub: #939498;
+    --color-text-main: #f8f8f8;
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        color: var(--color-text-main);
+        font-family: var(--font-tektur), 'Arial Narrow', sans-serif;
+    }
+
+    h1,h2{
+        font-weight: normal;
+        font-family: var(--font-train-one), 'Arial Black', sans-serif;
+    }
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    height: 200vh;
+    background: linear-gradient(var(--color-bg-black), var(--color-bg-gray));
+    
+    &::after{  
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: inherit;
+        opacity: .25;
+        background: url('/bg2.webp') repeat;
+        z-index: -2;
+    }
+}
