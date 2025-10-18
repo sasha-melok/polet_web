@@ -1,17 +1,25 @@
 
 nav{
     width: 100%;
-    padding: .6rem 5rem !important;
+    padding: .6rem 7rem !important;
 
     display: grid;
     grid-template-columns: 40% auto;
     align-items: center;
 
+    a{outline: 1px solid transparent;}
+
     .logo{
         padding-top: 5px;
+        
+        *{transition: all .3s ease;}
         a{
             height: auto;
             width: auto;
+        
+            &:hover img, &:focus img{
+                transform: scale(1.05);
+            }
         }
     }
 
@@ -20,8 +28,29 @@ nav{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        li{
-            
+        
+        a{
+            position: relative;
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateY(5px) translateX(-50%) scaleX(0);
+                width: 60%;
+                height: 1px;
+                background: currentColor;
+                clip-path: polygon(0% 50%, 20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%);
+                transition: transform .3s ease;
+            }
+
+            &:hover::after, &:focus::after {
+                transform: translateY(5px) translateX(-50%) scaleX(1);
+            }
         }
     }
 }
