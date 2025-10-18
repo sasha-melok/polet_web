@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Train_One, Tektur } from "next/font/google";
 import "./globals.css";
 import Navigation from "./Components/Navigation";
+import Footer from "./Components/Footer";
 
 const trainOne = Train_One({
   weight: '400',
@@ -31,7 +32,7 @@ export default function RootLayout({
         <div className="content">
           {children}
         </div>
-        
+        <Footer />
       </body>
     </html>
   );

@@ -8,7 +8,7 @@ export default function Navigation(){
         <nav>
             <div className="logo">
                 <Link href={'/'}>
-                    <Image src={'/logo.png'} alt='Логотип ПО "Полет"' width={186} height={36}></Image>
+                    <Image src={'/logo.png'} alt='Логотип ПО "Полет"' width={186} height={36} priority />
                 </Link>
             </div>
             <ul>
