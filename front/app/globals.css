@@ -33,7 +33,7 @@
 
 body{
     position: relative;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     min-height: 100vh;
     background: linear-gradient(var(--color-bg-black), var(--color-bg-gray));
@@ -52,8 +52,7 @@ body{
     }
 
     .content{
-        position: relative;
-        flex: 1;
+        flex: 1 !important;
         margin: 1.5rem 7rem 5rem;
     }
     
@@ -64,12 +63,29 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    height: 80%;
+    
     z-index: -1;
     opacity: 0.15;
     pointer-events: none;
     background-repeat: no-repeat;
     overflow: hidden;
+}
+
+body{
+    &.prod-act .bg_opt{
+        background-image: url('/sputnic1.png');
+        background-position: 32rem 7rem;
+        height: 70%;
+        background-size: 100%; 
+        transform: translateX(5rem) scale(1.3) rotate(15deg);
+    }
+    &.about-act .bg_opt{
+        background-image: url('/sputnic2.png');
+        background-position: 32rem 130%;
+        height: 70%;
+        background-size: 100%; 
+        transform: translateX(5rem) scale(1);
+    }
 }
 
 html {

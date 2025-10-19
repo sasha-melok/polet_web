@@ -1,0 +1,121 @@
+.p_abo{
+    display: grid;
+    grid-template-rows: repeat(6,1fr);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 1rem 0 4rem;
+
+    .block{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 3.5rem 0;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+
+        p{
+            font-size: 1.3rem;
+            text-align: center;
+            line-height: 2;
+            display: inline-block;
+            margin: auto;
+            position: relative;
+            width: 40%;
+            color: var(--color-text-sub);
+        }
+
+        
+
+        &:nth-child(odd){
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 50%;
+                border: 2px dashed var(--color-text-main);
+                border-radius: 10rem 0 0 10rem;
+                transform: scaleY(1);
+                border-right-color: transparent;
+            }
+            .date{
+                left: 1.5rem;
+
+                &::before{position: absolute;
+                    content: '';
+                    width: 9px;
+                    height: 9px;
+                    top: 50%;
+                    background: var(--color-text-main);
+                    border-radius: 50%;
+                    transform: translateY(-50%) translateX(-1.72rem);
+                    box-shadow: 0 0 14px 7px var(--color-blue);
+                    z-index: 1;
+                }
+            }
+            img{
+                right: 0;
+            }
+        }
+        &:nth-child(even){
+            
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                width: 50%;
+                border: 2px dashed var(--color-text-main);
+                border-radius: 0 10rem 10rem 0;
+                transform: scaleY(1.01);
+                border-left-color: transparent;
+            }
+            .date{
+                right: 1.5rem;
+                
+                &::after{position: absolute;
+                    content: '';
+                    width: 9px;
+                    height: 9px;
+                    top: 50%;
+                    background: var(--color-text-main);
+                    border-radius: 50%;
+                    transform: translateY(-50%) translateX(1.15rem);
+                    box-shadow: 0 0 14px 7px var(--color-blue);
+                    z-index: 1;
+                }
+            }
+
+            img{
+                left: 0;
+            }
+        }
+
+        &:first-child{
+            p:not(.date){
+                width: 54%;
+            }
+            &::after{
+                transform: scaleY(1.0005);
+            }
+        }
+
+        .date{
+            display: block;
+            width: fit-content;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--color-text-main);
+        }
+        
+        img{
+            position: absolute;
+        }
+    }
+}
