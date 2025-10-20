@@ -10,7 +10,7 @@ import Loading from '@/app/loading'
 import getVacancies from '@/app/lib/getVacancies'
 
 export default function Career(){
-
+    
     useEffect(()=>{
         document.body.classList.add('car-act')
         return () => {

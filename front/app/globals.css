@@ -97,6 +97,15 @@ body{
         
         transform: scale(1);
     }
+    &.new-act .bg_opt{
+        background-image: url('/rocket1.png');
+        background-position: 0 15rem;
+        height: 100%;
+        opacity: .5;
+        background-size: 100%; 
+        
+        transform: scale(1);
+    }
 }
 
 html {
@@ -191,17 +200,21 @@ html {
 
     .num{
         position: relative;
-        font-size: 18rem;
-        margin-bottom: 15rem;
+        font-size: 13rem;
+        margin-bottom: 12rem;
+font-family: var(--font-allerta);
 
+        span{
+            font-family: var(--font-allerta);
+        }
         
         &::after{
             position: absolute;
-            content: 'Упс';
+            content: 'Error';
             left: 0;
             top: 0;
             color: transparent;
-            transform: scaleY(-1) translateY(-18rem);
+            transform: scaleY(-1) translateY(-13rem);
             opacity: .2;
             background: linear-gradient(to top, var(--color-text-sub), transparent);
             background-clip: text;
@@ -213,7 +226,7 @@ html {
             position: absolute;
             bottom: 0;
             left: 50%;
-            transform: translateY(-2.5rem) translateX(-50%);
+            transform: translateY(-1.75rem) translateX(-50%);
             width: 80%;
             height: 1px;
             background: currentColor;
@@ -227,7 +240,7 @@ html {
 
         p{
             font-size: 1.5rem;
-            width: 90%;
+            width: 100%;
             
             margin: 0 auto;
         }

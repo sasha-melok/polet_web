@@ -22,7 +22,7 @@ export default function Error({error, reset}:{
     return (
         <div className="p_err">
         <div className="num">
-            <span>Упс</span>
+            <span>Error</span>
         </div>
         <div className="txt">
             <p>бортовой компьютер перегружен, попробуйте снова</p>

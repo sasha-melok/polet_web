@@ -1,0 +1,130 @@
+.p_news{
+    position: relative;
+
+    h1{
+        text-align: center;
+        font-size: 3rem;
+        letter-spacing: -10px;
+    }
+
+    .year_ch{
+        position: absolute;
+        top: 1.2rem;
+        left: 0;
+
+        .wrapper{
+            margin-bottom: .7rem;
+            position: relative;
+            display: block;
+            width: fit-content; 
+            --radius: .5rem;
+            --border-width: 2px;
+            transition: all .3s ease;
+            z-index: 1000;
+
+            &::before{
+                content: '';
+                position: absolute;
+                inset: 0;
+                padding: var(--border-width);
+                background: linear-gradient(90deg, var(--color-text-main), rgba(255, 255, 255, 0.205));
+                border-radius: var(--radius);
+                -webkit-mask:
+                    linear-gradient(#fff 0 0) content-box,
+                    linear-gradient(#fff 0 0);
+                mask:
+                    linear-gradient(#fff 0 0) content-box,
+                    linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                mask-composite: exclude;
+                pointer-events: none;
+            }
+
+            .curr_y{
+                outline: transparent;
+                background: none;
+                border: none;
+                font-size: 1rem;
+                padding: .6rem 1rem .6rem 1.5rem;
+                cursor: pointer;
+                transition: all .3s ease;
+
+                &::after {
+                    content: '▼';
+                    margin-left: 1rem;
+                    font-size: .9rem;
+                }
+
+                &:hover, &:focus, &:active{
+                    box-shadow: 0 0 24px var(--color-blue);
+
+                    ::after{
+                        font-size: .95rem;
+                    }
+                }
+            }
+
+            &.choose{
+                display: none;
+                width: 100%;
+                opacity: 0;
+                
+
+                &.open{
+                    display: block;
+                    animation: year .4s ease;
+                    animation-fill-mode: forwards;
+                    transform: translateY(0);
+
+                    button{
+                        cursor: pointer;
+                    }
+                }
+                overflow: hidden;
+
+                .choose_block{
+                    height: 11.3rem;
+                    overflow-y: scroll;
+                    scrollbar-width: none;
+                    
+                    button{
+                        outline: transparent;
+                        padding: .7rem 1rem;
+                        transition: all .3s ease;
+                        display: block;
+                        width: 100%;
+                        background: rgba(0, 0, 0, 0.911);
+                        border: none;
+
+                        &:hover, &:focus, &:active {
+                            font-size: 1rem;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .news_block{
+        margin-top: 2rem;
+    }
+}
+
+@keyframes year {
+    from{
+        display: none;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    20%{
+        display: block;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
