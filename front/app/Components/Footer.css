@@ -145,7 +145,7 @@ footer{
                     width: 100%;
                     background: none;
                     border: none;
-                    
+                    border-radius: var(--radius);
                     padding: .7rem 2rem .7rem .7rem;
                     
 

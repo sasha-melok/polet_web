@@ -1,0 +1,86 @@
+
+
+.vac{
+    position: relative;
+    --radius: .5rem;
+    --border-width: 2px;
+
+    padding: 1rem 1.5rem;
+
+    &::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        padding: var(--border-width);
+        background: linear-gradient(90deg, var(--color-text-sub), #7272721e);
+        border-radius: var(--radius);
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+
+    .wrapper{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem 0;
+
+        line-height: 1.5;
+        font-size: 1.15rem;
+
+        p, .schedule{
+            color: var(--color-text-sub);
+            margin-bottom: .2rem;
+        }
+        h3{
+            font-size: 1.4rem;
+            width: 90%;
+            margin-bottom: .5rem;
+        }
+
+        a{
+            position: relative;
+            width: fit-content;
+            padding: .6rem 2rem;
+            margin: 0 auto;
+            border-radius: var(--radius);
+            box-shadow: 0 2px 4px var(--color-blue);
+            transition: all .3s ease;
+            
+            &::before{
+                content: '';
+                position: absolute;
+                inset: 0;
+                padding: var(--border-width);
+                background: linear-gradient(90deg, var(--color-text-sub), #7272721e);
+                border-radius: var(--radius);
+                -webkit-mask:
+                    linear-gradient(#fff 0 0) content-box,
+                    linear-gradient(#fff 0 0);
+                mask:
+                    linear-gradient(#fff 0 0) content-box,
+                    linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                mask-composite: exclude;
+                pointer-events: none;
+            }
+
+            .wrapper{
+                font-size: 1.05rem;
+            }
+
+            &:hover{
+                box-shadow: 0 0 24px var(--color-blue);
+                transform: scale(1.05);
+            }
+        }
+    }
+}

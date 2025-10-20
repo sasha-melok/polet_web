@@ -1,21 +1,31 @@
+'use client'
+
 import Link from "next/link"
-import './products.css'
+import styles from './page.module.css'
+import { useEffect } from "react"
 
 export default function Products(){
+    useEffect(()=>{
+        document.body.classList.add('prod-act')
+        return () => {
+            document.body.classList.remove('prod-act')
+        }
+    }, [])
+
     return(
-        <div className="p_prod">
-            <div className="block">
+        <div className={styles.p_prod}>
+            <div className={styles.block}>
                 <h2>УСЛУГИ ЖКХ</h2>
                 <p>ПО «Полёт» — филиал АО «ГНЦ им. М.В. Хруничева» оказывает услуги по управлению и обслуживанию жилых домов и коммерческой недвижимости с 2003 года. На данный момент в управлении организации находится 257 жилых домов, а это более 25000 квартир.</p>
                 <p>Основными мероприятиями, проводимыми нашей компанией, являются: осуществление общестроительных, инженерных, электромонтажных, специализированных строительных, изоляционных, штукатурных, малярных, санитарно-технических работ.</p>
                 <p>Наша управляющая компания обладает обширной материально-технической базой, имеет личную аварийно-ремонтную службу, в наличии склады необходимых материалов и запасных частей для предотвращения любой аварийной ситуации.</p>
-                <div className="contacts">
+                <div className={styles.contacts}>
                     <p><span>Абонентский отдел:</span> (3812) 39-71-44</p>
                     <p><span>Оплата услуг доступна по <Link href={''}>ссылке</Link></span></p>
                 </div>
             </div>
 
-            <div className="block">
+            <div className={styles.block}>
                 <h2>Реализация лома черных и цветных металлов, прочих производственных отходов</h2>
                 <p>"ПО "Полет" - филиал АО «ГКНПЦ им. Хруничева» информирует о запросе коммерческих предложений на реализацию отходов производства на электронной торговой площадке <Link href={'https://lot-online.ru/'} target="_blank">lot-online.ru</Link></p>
                 <p>Вид металлолома и процент засора устанавливается в соответствии с ГОСТ Р54564-2011 и ГОСТ 2787-75</p>
@@ -43,7 +53,7 @@ export default function Products(){
                     <li>маслоотходы.</li>
                 </ul>
 
-                <div className="contacts">
+                <div className={styles.contacts}>
                     <h4>Контактные данные для разъяснения порядка проведения процедуры:</h4>
                     <p><span>Электронный адрес:</span> pogrebnyakov.aa@khrunichev.ru</p>
                     <p><span>Контактное лицо:</span> Погребняков Александр Александрович</p>
