@@ -39,7 +39,7 @@
                 width: 50%;
                 border: 2px dashed var(--color-text-main);
                 border-radius: 10rem 0 0 10rem;
-                transform: scaleY(1);
+                /* transform: scaleY(.995); */
                 border-right-color: transparent;
             }
             .date{
@@ -99,9 +99,6 @@
         &:first-child{
             p:not(.date){
                 width: 54%;
-            }
-            &::after{
-                transform: scaleY(1.0005);
             }
         }
 
