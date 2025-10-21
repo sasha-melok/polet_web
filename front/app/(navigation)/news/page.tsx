@@ -1,6 +1,6 @@
 'use client'
 
-import getNews from '@/app/lib/getNews'
+import { getNews } from '@/app/lib/getNews'
 import { useEffect, useState } from 'react'
 import NewsList from '@/app/Components/NewsList'
 import s from './page.module.css'
