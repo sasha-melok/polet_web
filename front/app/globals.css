@@ -97,6 +97,22 @@ body{
         
         transform: scale(1);
     }
+    &.new-act .bg_opt{
+        background-image: url('/rocket1.png');
+        background-position: 0 15rem;
+        height: 100%;
+        opacity: .5;
+        background-size: 100%; 
+        transform: scale(1);
+    }
+    &.con-act .bg_opt{
+        background-image: url('/planet.png');
+        background-position: 40rem 7rem;
+        height: 100%;
+        opacity: .15;
+        background-size: 80%; 
+        transform: scale(1);
+    }
 }
 
 html {
@@ -105,4 +121,158 @@ html {
 
 .load p{
     color: var(--color-text-sub) !important;
+}
+
+.p_404{
+    display: flex;
+    min-height: 80vh;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 5rem;
+
+    .num{
+        position: relative;
+        font-family: var(--font-allerta);
+        font-size: 18rem;
+        margin-bottom: 12rem;
+
+        span{
+            font-family: var(--font-allerta);
+            
+        }
+        
+        &::after{
+            position: absolute;
+            content: '404';
+            left: 0;
+            top: 0;
+            color: transparent;
+            transform: scaleY(-1) translateY(-18rem);
+            opacity: .2;
+            background: linear-gradient(to top, var(--color-text-sub), transparent);
+            background-clip: text;
+        }
+
+        &::before{
+            content: '';
+            will-change: transform;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateY(-2.5rem) translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background: currentColor;
+            clip-path: polygon(0% 50%, 20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%);
+            transition: transform .3s ease;
+        }
+    }
+
+    .txt{
+        text-align: center;
+
+        p{
+            font-size: 1.5rem;
+            width: 70%;
+            
+            margin: 0 auto;
+        }
+        a{
+            width: fit-content;
+            margin: 0 auto;
+            padding: .6rem 2rem;
+            font-size: 1.1rem;
+            display: block;
+            margin-top: 2rem;
+            border: 4px double currentColor;
+            transition: all .3s ease;
+
+            &:hover{
+                box-shadow: 0 0 24px var(--color-blue);
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+.p_err{
+    display: flex;
+    min-height: 80vh;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 5rem;
+    gap: 0 7rem;
+
+    .num{
+        position: relative;
+        font-size: 13rem;
+        margin-bottom: 12rem;
+font-family: var(--font-allerta);
+
+        span{
+            font-family: var(--font-allerta);
+        }
+        
+        &::after{
+            position: absolute;
+            content: 'Error';
+            left: 0;
+            top: 0;
+            color: transparent;
+            transform: scaleY(-1) translateY(-13rem);
+            opacity: .2;
+            background: linear-gradient(to top, var(--color-text-sub), transparent);
+            background-clip: text;
+        }
+
+        &::before{
+            content: '';
+            will-change: transform;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateY(-1.75rem) translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background: currentColor;
+            clip-path: polygon(0% 50%, 20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%);
+            transition: transform .3s ease;
+        }
+    }
+
+    .txt{
+        text-align: center;
+
+        p{
+            font-size: 1.5rem;
+            width: 100%;
+            
+            margin: 0 auto;
+        }
+
+        .buttons{
+            margin-top: 2rem;
+            display: flex;
+            gap: 0 1rem;
+        }
+
+        button{
+            width: 40%;
+            margin: 0 auto;
+            padding: .5rem 1rem;
+            font-size: 1rem;
+            display: block;
+            
+            border: 4px double currentColor;
+            transition: all .3s ease;
+            background: none;
+
+            &:hover{
+                box-shadow: 0 0 24px var(--color-blue);
+                transform: scale(1.05);
+            }
+        }
+    }
 }
