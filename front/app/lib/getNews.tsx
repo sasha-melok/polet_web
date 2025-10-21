@@ -8,10 +8,7 @@ export async function getNews() {
                 'Authorization': `Bearer ${process.env.STRAPI_API}`
             }
         })
-        const data = await res.json()
-
-        console.log('token ' + process.env.STRAPI_API);
-        
+        const data = await res.json()        
 
         if (!res.ok){
             throw new Error('Ошибка при получении данных')
@@ -32,10 +29,7 @@ export async function getNew(slug:string) {
                 'Authorization': `Bearer ${process.env.STRAPI_API}`
             }
         })
-        const data = await res.json()
-
-        console.log('token ' + process.env.STRAPI_API);
-        
+        const data = await res.json()        
 
         if (!res.ok){
             throw new Error('Ошибка при получении данных')

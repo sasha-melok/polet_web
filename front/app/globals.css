@@ -103,7 +103,14 @@ body{
         height: 100%;
         opacity: .5;
         background-size: 100%; 
-        
+        transform: scale(1);
+    }
+    &.con-act .bg_opt{
+        background-image: url('/planet.png');
+        background-position: 40rem 7rem;
+        height: 100%;
+        opacity: .15;
+        background-size: 80%; 
         transform: scale(1);
     }
 }
