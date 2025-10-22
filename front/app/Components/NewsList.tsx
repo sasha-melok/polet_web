@@ -16,7 +16,7 @@ export default function NewsList({
             <p className="date">{date_f}</p>
             <div className="txt_block">
                 <h3>{name}</h3>
-                <p className="info">{content.length > 100 ? content.split(' ').slice(0,40).join(' ') +'...' : content}</p>
+                <p className="info">{content.length > 100 ? content.split(' ').slice(0,25).join(' ') +'...' : content}</p>
             </div>
         </Link>
     )

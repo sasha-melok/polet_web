@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "./Components/Navigation";
 import Footer from "./Components/Footer";
 import PageTransition from "./Components/PageTransition";
+import MobileNavigation from "./Components/MobileNavigation";
 
 const trainOne = Train_One({
   weight: '400',
@@ -33,6 +34,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={`${tektur.variable} ${trainOne.variable} ${allerta.variable}`}>
         <div className="bg_opt"></div>
         <Navigation />
+        <MobileNavigation />
+        
         <div className="content">
           <PageTransition>{children}</PageTransition>
         </div>

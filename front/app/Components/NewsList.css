@@ -16,6 +16,7 @@
         
 
         &::before{
+            will-change: transform;
             transition: all .3s ease;
             content: '';
             position: absolute;
@@ -68,6 +69,63 @@
 
         .date::before{
             opacity: .1;
+        }
+    }
+}
+
+@media screen and (width < 1220px) {
+    .new_el{
+        .txt_block{
+            h3{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (width < 768px){
+    .new_el{
+        flex-direction: column;
+        .date{
+            font-size: 1.25rem;
+
+            &::before{
+                will-change: transform;
+                transition: all .3s ease;
+                content: '';
+                position: absolute;
+                background: linear-gradient(to top, var(--color-text-main), transparent);
+                transform-origin: bottom;
+                opacity: 0;
+                transform: translateY(1rem) scaleY(1.5);
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+        .txt_block{
+
+            &::after{
+                content: '';
+                will-change: transform;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateY(1rem);
+                height: 1px;
+                width: 100%;
+                background: currentColor;
+                clip-path: polygon(0% 50%, 20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%);
+                z-index: 1;
+            }
+
+            h3{
+                font-size: 1.8rem;
+            }
+            p.info{
+                width: 100%;
+            }
         }
     }
 }

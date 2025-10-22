@@ -6,7 +6,7 @@ import NewsList from '@/app/Components/NewsList'
 import s from './page.module.css'
 
 export default function News(){
-    const [ newsData, setNewsData ] = useState([])
+    const [ newsData, setNewsData ] = useState<any[]>([])
     const [ newsFilter, setNewsFilter ] = useState(newsData)
     const [ newsYear, setNewsYear ] = useState('2025')
 
@@ -25,7 +25,7 @@ export default function News(){
                         return 0
                     }
                 })
-
+                
                 setNewsData(filtNews)
             } catch (err){
                 console.log(err)
@@ -47,7 +47,6 @@ export default function News(){
         const n_data = newsData.filter((el:any) => new Date(el.date).getFullYear() == Number(newsYear))
 
         setNewsFilter(n_data)
-        console.log(newsFilter)
     }, [newsYear, newsData])
 
     const giveClass = () => {
@@ -55,9 +54,12 @@ export default function News(){
         if (el != null){
             el.classList.toggle(s.open)
         }
+        document.body.querySelector(`.${s.back_n}`)?.classList.toggle(s.open)
     }
 
     return (
+        <>
+        <div className={s.back_n} onClick={giveClass}></div>
         <div className={s.p_news}>
             <h1>Новости</h1>
             <div className={s.year_ch}>
@@ -86,12 +88,20 @@ export default function News(){
                     </div>
                 </div>
             </div>
-
-            <div className={s.news_block}>
+            
+            {newsFilter.length == 0 ? (
+                <div className={s.news_empty}>
+                    <p>Новости за данный период не найдены</p>
+                </div>
+            ) : (
+                <div className={s.news_block}>
                 {newsFilter.map((el:any ) => (
                     <NewsList key={el.slug} {...el} />
                 ))}
             </div>
+            )}
+            
         </div>
+        </>
     )
 }

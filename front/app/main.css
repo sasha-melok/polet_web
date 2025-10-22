@@ -5,7 +5,7 @@
     align-items: center;
     justify-items: start;
     align-content: center;
-    *{color: var(--color-text-sub);}
+    *{color: var(--color-text-sub); z-index: 0;}
 
     
 
@@ -22,7 +22,6 @@
         }
         &:first-child{
             width: 120%;
-            /* transform: translateX(40px); */
             p{
                 letter-spacing: 2px;
                 line-height: 1.5;
@@ -43,7 +42,7 @@
             font-size: 1.25rem;
             outline: transparent;
             border: 4px double var(--color-text-main);
-            padding: .5rem 1.2rem;
+            padding: 1rem 1.2rem;
             color: var(--color-text-main);
             transition: all .3s ease;
 
@@ -55,15 +54,78 @@
 
     .img_block{
         width: 100%;
-        height: 100%;
+        height: auto;
         transform: translateX(4rem);
         img{
+            
             position: relative !important;
             transform: scale(1.1);
         }
 
         &:nth-child(2 of .img_block){
             transform: translateX(-4rem);
+        }
+    }
+}
+
+@media screen and (width < 1220px) {
+    .p_main{
+
+        .txt_block{
+            width: 100%;
+            font-size: 1.3rem;
+        }
+        .img_block{
+
+            img, &:nth-child(2 of .img_block){
+                transform: none;
+            }
+        }
+    }
+}
+
+@media screen and (width < 896px) {
+    .p_main{
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+
+        .txt_block{
+            text-align: center;
+            font-size: 1.7rem;
+
+            &:first-child{
+                width: 100%;
+            }
+            &:nth-child(2 of .txt_block){
+                grid-row: 3 / 4;
+            }
+
+
+            h1{
+                font-size: 5rem;
+            }
+            .button{
+                font-size: 1.7rem;
+            }
+        }
+        .img_block{
+            transform: none;
+        }
+    }
+}
+
+@media screen and (width < 512px){
+    .p_main{
+        h1{
+            font-size: 3.25rem !important;
+        }
+
+        .txt_block{
+            font-size: 1.2rem;
+
+            .button{
+                font-size: 1.3rem;
+            }
         }
     }
 }

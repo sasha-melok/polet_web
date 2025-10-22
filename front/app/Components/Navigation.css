@@ -1,5 +1,4 @@
-
-nav{
+.desktop{
     width: 100%;
     padding: .9rem 7rem !important;
 
@@ -57,3 +56,13 @@ nav{
     }
 }
 
+@media screen and (width < 1220px) {
+    .desktop{
+        padding: .9rem 2rem !important;
+    }
+}
+@media screen and (width < 896px) {
+    .desktop{
+        display: none;
+    }
+}

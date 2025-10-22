@@ -51,7 +51,7 @@ body{
         z-index: -2;
     }
 
-    .content{
+    &>.content{
         flex: 1 !important;
         margin: 1.5rem 7rem 5rem;
     }
@@ -255,24 +255,152 @@ font-family: var(--font-allerta);
         .buttons{
             margin-top: 2rem;
             display: flex;
-            gap: 0 1rem;
+            flex-direction: column;
+            gap: 1rem;
         }
 
         button{
-            width: 40%;
+            width: 100%;
             margin: 0 auto;
             padding: .5rem 1rem;
-            font-size: 1rem;
+            font-size: 1.2rem;
             display: block;
             
-            border: 4px double currentColor;
             transition: all .3s ease;
             background: none;
 
+            border: none;
+            &::before{
+                content: '>';
+                margin-right: 1rem;
+            }
+
             &:hover{
-                box-shadow: 0 0 24px var(--color-blue);
+                text-shadow: 0 0 24px var(--color-blue);
                 transform: scale(1.05);
             }
+        }
+    }
+}
+
+@media screen and (width < 1220px) {
+    body{
+
+        & > .content{
+            margin: 1.5rem 2rem 5rem;
+        }
+    }
+
+    body{
+        &.prod-act .bg_opt{
+            background-position: 12rem 20rem;
+            transform: translateX(5rem) scale(1.3) rotate(15deg);
+        }
+        &.about-act .bg_opt{
+            background-position: 12rem 50rem;
+            transform: translateX(5rem) scale(1.2);
+        }
+        &.car-act .bg_opt{
+            background-position: 35rem 30rem;
+            transform: scale(1);
+        }
+        &.new-act .bg_opt{
+            background-position: 0 15rem;
+            transform: scale(1);
+        }
+        &.con-act .bg_opt{
+            background-position: 30rem 17rem;
+            transform: scale(1);
+        }
+    }
+
+    .p_404, .p_err{
+        margin: 5rem 0 0 0;
+        flex-direction: column-reverse;
+        min-height: 60vh;
+    }
+}
+
+@media screen and (width < 896px) {
+    body{
+        .content{
+            margin-top: 8rem;
+        }
+    }
+
+    .p_404{
+        .num{
+            font-size: 15rem;
+            &::after{
+                transform: scaleY(-1) translateY(-15rem);
+            }
+            &::before{
+                transform: translateY(-2rem) translateX(-50%);
+            }
+        }
+    }
+    .p_err .num{
+        font-size: 11rem;
+        &::after{
+            transform: scaleY(-1) translateY(-11rem);
+        }
+        &::before{
+            transform: translateY(-1.5rem) translateX(-50%);
+        }
+    }
+}
+
+@media screen and (width < 512px){
+    
+    body .content{
+        margin: 8rem 1rem 6rem;
+    }
+
+    body{
+        &.prod-act .bg_opt{
+            background-position: 9rem 70rem;
+            background-size: 100%;
+            opacity: .1;
+            transform: translateX(-15rem) scale(2.3) rotate(15deg);
+        }
+        &.about-act .bg_opt{
+            background-position: 7rem 55rem;
+            transform: translateX(0rem) scale(1.9);
+        }
+        &.car-act .bg_opt{
+            background-position: 10rem 40rem;
+            background-size: 100%;
+            transform: scale(1);
+        }
+        &.new-act .bg_opt{
+            background-position: 0 55rem;
+            transform: scale(1);
+        }
+        &.con-act .bg_opt{
+            background-position: 4rem 50rem;
+            background-size: 130%;
+            transform: scale(1);
+        }
+    }
+
+    .p_404{
+        .num{
+            font-size: 10rem;
+            &::after{
+                transform: scaleY(-1) translateY(-10rem);
+            }
+            &::before{
+                transform: translateY(-1.25rem) translateX(-50%);
+            }
+        }
+    }
+    .p_err .num{
+        font-size: 7rem;
+        &::after{
+            transform: scaleY(-1) translateY(-7rem);
+        }
+        &::before{
+            transform: translateY(-1rem) translateX(-50%);
         }
     }
 }
