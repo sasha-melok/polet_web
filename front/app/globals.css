@@ -357,30 +357,14 @@ font-family: var(--font-allerta);
     }
 
     body{
-        &.prod-act .bg_opt{
-            background-position: 9rem 70rem;
+        &.prod-act .bg_opt, &.about-act .bg_opt, &.car-act .bg_opt, &.new-act .bg_opt, &.con-act .bg_op{
+            background-position: 0rem 0rem;
             background-size: 100%;
-            opacity: .1;
-            transform: translateX(-15rem) scale(2.3) rotate(15deg);
+            opacity: 0;
+            display: none;
+            transform: none;
         }
-        &.about-act .bg_opt{
-            background-position: 7rem 55rem;
-            transform: translateX(0rem) scale(1.9);
-        }
-        &.car-act .bg_opt{
-            background-position: 10rem 40rem;
-            background-size: 100%;
-            transform: scale(1);
-        }
-        &.new-act .bg_opt{
-            background-position: 0 55rem;
-            transform: scale(1);
-        }
-        &.con-act .bg_opt{
-            background-position: 4rem 50rem;
-            background-size: 130%;
-            transform: scale(1);
-        }
+        
     }
 
     .p_404{
