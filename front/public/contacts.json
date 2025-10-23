@@ -1,0 +1,268 @@
+{
+"info":[
+    {
+        "type": "heading",
+        "children": [
+            {
+                "type": "text",
+                "text": "Справочная АТС"
+            }
+        ],
+        "level": 3
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "Tел.: (3812) 39-71-60"
+            }
+        ]
+    },
+    {
+        "type": "heading",
+        "children": [
+            {
+                "type": "text",
+                "text": "Руководитель филиала АО \"ГКНПЦ им. М.В. Хруничева\" в городе Омск - директор ПО \"Полет\""
+            }
+        ],
+        "level": 3
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "Tел.: (3812) 39-72-01"
+            }
+        ]
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "Факс: (3812) 39-72-40"
+            }
+        ]
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "E-mail: info.polet@khrunichev.ru"
+            }
+        ]
+    },
+    {
+        "type": "heading",
+        "children": [
+            {
+                "type": "text",
+                "text": "Отдел кадров"
+            }
+        ],
+        "level": 3
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "Тел.: (3812) 39-71-01"
+            }
+        ]
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "Тел.: (3812) 39-71-51"
+            }
+        ]
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "Тел.: (3812) 39-75-28"
+            }
+        ]
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "E-mail: generalova.ms@khrunichev.ru"
+            }
+        ]
+    },
+
+    {
+        "type": "heading",
+        "children": [
+            {
+                "type": "text",
+                "text": "Отдел корпоративных коммуникаций"
+            }
+        ],
+        "level": 3
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "Тел.: (3812) 39-71-22"
+            }
+        ]
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "E-mail: savostina.ov@khrunichev.ru"
+            }
+        ]
+    },
+    {
+        "type": "heading",
+        "children": [
+            {
+                "type": "text",
+                "text": "Телефон доверия"
+            }
+        ],
+        "level": 3
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "Тел.: (499)-749-99-73"
+            }
+        ]
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "Тел.: внутр. 5-99-73"
+            }
+        ]
+    },
+    {
+        "type": "heading",
+        "children": [
+            {
+                "type": "text",
+                "text": "Абонентский отдел (коммунальные платежи) "
+            }
+        ],
+        "level": 3
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "Тел.: (3812) 39-71-44"
+            }
+        ]
+    },
+    {
+        "type": "heading",
+        "children": [
+            {
+                "type": "text",
+                "text": "Факс: "
+            },
+            {
+                "type": "text",
+                "text": "(3812) 39-72-40",
+                "italic": true
+            }
+        ],
+        "level": 3
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "Справки о получении факсов по тел.: (3812) 39-71-33"
+            }
+        ]
+    },
+    {
+        "type": "heading",
+        "children": [
+            {
+                "type": "text",
+                "text": "E-mail: "
+            },
+            {
+                "type": "text",
+                "text": "info.polet@khrunichev.ru",
+                "italic": true
+            }
+        ],
+        "level": 3
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "Справки о получении e-mail по тел.: (3812) 39-74-20"
+            }
+        ]
+    },
+    {
+        "type": "heading",
+        "children": [
+            {
+                "type": "text",
+                "text": "Юридический адрес:"
+            }
+        ],
+        "level": 3
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "121087, г. Москва, ул. Новозаводская, 18"
+            }
+        ]
+    },
+    {
+        "type": "heading",
+        "children": [
+            {
+                "type": "text",
+                "text": "Фактический адрес:"
+            }
+        ],
+        "level": 3
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "644021, г. Омск, ул. Б.Хмельницкого, 226"
+            }
+        ]
+    }
+]
+}

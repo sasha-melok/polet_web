@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation"
 export default function Navigation(){
     const pathname = usePathname()
     return(
-        <nav>
+        <nav className="desktop">
             <div className="logo">
                 <Link href={'/'}>
                     <Image src={'/logo.png'} alt='Логотип ПО "Полет"' width={206} height={40} priority />

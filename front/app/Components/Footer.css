@@ -229,3 +229,66 @@ footer{
         color: var(--color-text-sub);
     }
 }
+
+
+@media screen and (width < 1220px) {
+    footer{
+        margin: 0 2rem .5rem !important;
+    }
+}
+
+@media screen and (width < 896px) {
+    footer{
+
+        .info{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+
+            .nav{
+                display: none;
+            }
+            .form{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (width < 512px) {
+    footer .info{
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 4rem 0;
+
+        .form{
+            h3{font-size: 2.5rem;}
+            input, textarea{
+                font-size: 1.2rem;
+                padding: 1rem !important;
+            }
+            textarea{
+                height: 10rem !important;
+            }
+            button{
+                font-size: 1.4rem !important;
+            }
+        }
+        .contacts{
+            h2{
+                margin-bottom: 1rem !important;
+            }
+            p{
+                line-height: 2;
+            }
+            .links{
+                margin-top: 2rem;
+                a{margin-right: 3rem;}
+                img{
+                    width: 60px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

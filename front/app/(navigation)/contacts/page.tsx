@@ -5,6 +5,8 @@ import { getContacts } from '@/app/lib/getContacts'
 import { useEffect, useState } from 'react'
 
 export default function Contacts(){
+    // throw new Error('twert')
+
     const [ contData, setContData ] = useState<any[]>([])
     useEffect(()=>{
         document.body.classList.add('con-act')
@@ -17,7 +19,7 @@ export default function Contacts(){
         const getData = async () => {
             try{
                 const data = await getContacts()
-console.log(data.info)
+
                 setContData(data.info)
             } catch (err){
                 console.error(err)

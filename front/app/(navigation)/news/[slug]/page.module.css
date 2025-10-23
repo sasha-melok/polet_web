@@ -32,34 +32,103 @@
             
             &.solo{
                 grid-area: 1 / 2 / 2 / 3;
-                width: 35vw;
+                width: 35vw; 
+                justify-self: center;
                 
                 img{
                     border-radius: 1rem;
-                    width: inherit;
+                    width: max-content; 
                     height: auto !important;
                 }
             }
 
             &.mult{
                 grid-column: 1 / 3;
-                display: flex;
-                flex-direction: row;
-                gap: 3rem 2rem;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-content: space-between;
+                gap: 1rem 1rem;
 
                 img{
+                    position: relative;
                     border-radius: 1rem;
-                    width: 20vw;
+                    width: 100%;
                     height: auto;
                 }
             }
 
         }
         
-        &:has(.mult){
+        &:has(.mult), &:not(&:has(.imgs)){
             p{
                 grid-column: 1 / 3 !important;
             }
         }
+
+        &:not(&:has(p)){
+            display: block;
+
+            .imgs{
+                width: 100%;
+
+                &.solo{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 }
+
+@media screen and (width < 1220px) {
+    .p_new1{
+
+        .content{
+
+            .imgs{
+                &.mult{
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (width < 768px){
+    .p_new1{
+
+        .content{
+            grid-template-columns: 1fr;
+            gap: 1.5rem 0;
+
+            .imgs{
+
+                &.solo{
+                    grid-area: 2 / 1 / 3 / 2;
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (width < 512px){
+    .p_new1{
+        h2{
+            font-size: 1.6rem;
+        }
+        p{font-size: 1.05rem;}
+        .content .imgs{
+            
+            &.mult{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+
