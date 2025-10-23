@@ -102,6 +102,7 @@
             }
         ]
     },
+
     {
         "type": "heading",
         "children": [
@@ -215,6 +216,15 @@
             }
         ],
         "level": 3
+    },
+    {
+        "type": "paragraph",
+        "children": [
+            {
+                "type": "text",
+                "text": "Справки о получении e-mail по тел.: (3812) 39-74-20"
+            }
+        ]
     },
     {
         "type": "heading",
